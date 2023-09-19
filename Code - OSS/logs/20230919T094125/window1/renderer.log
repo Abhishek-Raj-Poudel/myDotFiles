@@ -1,0 +1,14 @@
+2023-09-19 09:41:26.859 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/abhi/.config/htop/htoprc","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2023-09-19 09:41:27.316 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: blade
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: ejs
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: latte
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: tpl
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: twig
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: vue-html
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: django-html
+2023-09-19 09:41:27.317 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: jinja-html
+2023-09-19 09:41:27.318 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: erb
+2023-09-19 09:41:27.318 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: HTML (Eex)
+2023-09-19 09:41:27.318 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: volt
+2023-09-19 09:41:27.318 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: nunjucks
+2023-09-19 09:41:30.102 [info] [perf] Render performance baseline is 25ms

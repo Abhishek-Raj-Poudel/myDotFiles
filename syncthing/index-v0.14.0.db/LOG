@@ -850,3 +850,21 @@
 07:50:03.146959 table@compaction committed F-1 S-3KiB Ke·0 D·227 T·74.825998ms
 07:50:03.147242 table@remove removed @197
 07:50:03.147402 table@remove removed @198
+08:24:03.048705 db@close closing
+08:24:03.049900 db@close done T·1.194216ms
+=============== Sep 19, 2023 (+0545) ===============
+09:30:29.895793 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:29.899451 version@stat F·[0 2] S·3MiB[0B 3MiB] Sc·[0.00 0.03]
+09:30:29.899499 db@open opening
+09:30:29.899557 journal@recovery F·1
+09:30:29.901969 journal@recovery recovering @200
+09:30:29.907092 memdb@flush created L0@204 N·55 S·802B "\x03RQ..ion,v93872":"\nla..ime,v93866"
+09:30:29.907586 version@stat F·[1 2] S·3MiB[802B 3MiB] Sc·[0.25 0.03]
+09:30:29.916048 db@janitor F·6 G·1
+09:30:29.916064 db@janitor removing table-199
+09:30:29.916302 db@open done T·16.795183ms
+09:30:31.310734 table@compaction L0·1 -> L1·1 S·1MiB Q·93873
+09:30:31.343095 table@build created L1@207 N·23330 S·1MiB "\x01\x00\x00...md,v5059":"\x0e\x00\x00...js,v69387"
+09:30:31.343127 version@stat F·[0 2] S·3MiB[0B 3MiB] Sc·[0.00 0.03]
+09:30:31.344614 table@compaction committed F-1 S-808B Ke·0 D·55 T·33.85858ms
+09:30:31.345066 table@remove removed @203
