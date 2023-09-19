@@ -1,5 +1,5 @@
-./yay
-./xfce4
+yay
+xfce4
 Thunar
 systemd
 syncthing
@@ -17,6 +17,3 @@ cubocore
 Code-OSS
 BraveSoftware
 aseprite
-
-mimeapps.list
-pavucontrol.ini
