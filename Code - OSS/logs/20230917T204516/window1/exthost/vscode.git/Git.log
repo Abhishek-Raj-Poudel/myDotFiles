@@ -1,0 +1,42 @@
+2023-09-17 20:45:18.483 [info] Log level: Info
+2023-09-17 20:45:18.483 [info] Validating found git in: "git"
+2023-09-17 20:45:18.483 [info] Using git "2.42.0" from "git"
+2023-09-17 20:45:18.483 [info] > git rev-parse --show-toplevel [3ms]
+2023-09-17 20:45:18.483 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-09-17 20:45:18.484 [info] > git rev-parse --show-toplevel [3ms]
+2023-09-17 20:45:18.484 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-09-17 20:45:18.494 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-17 20:45:18.494 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-09-17 20:45:18.636 [info] > git rev-parse --show-toplevel [39ms]
+2023-09-17 20:45:18.636 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-09-17 20:45:18.647 [info] > git rev-parse --show-toplevel [2ms]
+2023-09-17 20:45:18.647 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-09-17 20:45:18.673 [info] > git rev-parse --show-toplevel [18ms]
+2023-09-17 20:45:18.673 [info] fatal: not a git repository (or any of the parent directories): .git
+2023-09-17 20:45:27.943 [info] Log level: Info
+2023-09-17 20:45:27.943 [info] Validating found git in: "git"
+2023-09-17 20:45:27.943 [info] Using git "2.42.0" from "git"
+2023-09-17 20:45:27.961 [info] > git rev-parse --show-toplevel [19ms]
+2023-09-17 20:45:27.967 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2023-09-17 20:45:27.976 [info] Open repository: /home/abhi/projects/infinity-digital-agency-website
+2023-09-17 20:45:27.994 [info] > git config --get commit.template [8ms]
+2023-09-17 20:45:28.001 [info] > git rev-parse --show-toplevel [10ms]
+2023-09-17 20:45:28.012 [info] > git rev-parse --show-toplevel [1ms]
+2023-09-17 20:45:28.017 [info] > git rev-parse --show-toplevel [1ms]
+2023-09-17 20:45:28.023 [info] > git rev-parse --show-toplevel [1ms]
+2023-09-17 20:45:28.028 [info] > git rev-parse --show-toplevel [1ms]
+2023-09-17 20:45:28.035 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/ida-frontend refs/remotes/ida-frontend [29ms]
+2023-09-17 20:45:28.056 [info] > git status -z -uall [15ms]
+2023-09-17 20:45:28.082 [info] > git config --get commit.template [12ms]
+2023-09-17 20:45:28.147 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/ida-frontend refs/remotes/ida-frontend [18ms]
+2023-09-17 20:45:28.156 [info] > git status -z -uall [3ms]
+2023-09-17 20:45:28.502 [info] > git check-ignore -v -z --stdin [1ms]
+2023-09-17 20:45:34.583 [info] > git config --get commit.template [6ms]
+2023-09-17 20:45:34.583 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/ida-frontend refs/remotes/ida-frontend [1ms]
+2023-09-17 20:45:34.594 [info] > git status -z -uall [6ms]
+2023-09-17 20:45:49.947 [info] > git config --get commit.template [6ms]
+2023-09-17 20:45:49.993 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/ida-frontend refs/remotes/ida-frontend [47ms]
+2023-09-17 20:45:50.000 [info] > git status -z -uall [2ms]
+2023-09-17 20:47:23.394 [info] > git config --get commit.template [6ms]
+2023-09-17 20:47:23.394 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/ida-frontend refs/remotes/ida-frontend [1ms]
+2023-09-17 20:47:23.401 [info] > git status -z -uall [2ms]

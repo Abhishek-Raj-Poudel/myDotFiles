@@ -1,0 +1,41 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icon128.png",
+         "16": "icon16.png",
+         "32": "icon32.png",
+         "48": "icon48.png",
+         "64": "icon64.png"
+      },
+      "default_title": "News Feed Eradicator"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "@news-feed-eradicator"
+      }
+   },
+   "description": "Eradicate social media noise by replacing your entire news feed with an inspiring quote",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKrC3WTHdhYGH+FQBtryYUhumriE2DZuihZUtOSNwb6PPr/fvK5rACIhquUo44MTcFpQBDnGLwS794MOqsy9qOT/wquLExwKteCCT8pH5V8lu8NjvRMaVfvtMk3nDm8tpaN5ggqwyEGTfhuOag61g0NNfNg8rJgItfkrn0gT+1kwIDAQAB",
+   "manifest_version": 2,
+   "name": "News Feed Eradicator",
+   "optional_permissions": [ "http://www.facebook.com/*", "https://www.facebook.com/*", "http://web.facebook.com/*", "https://web.facebook.com/*", "http://twitter.com/*", "https://twitter.com/*", "https://www.reddit.com/", "http://www.reddit.com/", "https://old.reddit.com/", "http://old.reddit.com/", "https://news.ycombinator.com/*", "http://www.linkedin.com/*", "https://www.linkedin.com/*", "https://www.youtube.com/*", "https://www.github.com/*", "https://github.com/*", "http://www.instagram.com/*", "https://www.instagram.com/*" ],
+   "options_ui": {
+      "browser_style": false,
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.5"
+}

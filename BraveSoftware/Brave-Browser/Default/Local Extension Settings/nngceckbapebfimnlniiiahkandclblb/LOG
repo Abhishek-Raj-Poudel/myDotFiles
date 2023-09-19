@@ -1,0 +1,12 @@
+2023/09/19-07:50:27.309 37b Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/Local Extension Settings/nngceckbapebfimnlniiiahkandclblb/MANIFEST-000001
+2023/09/19-07:50:27.310 37b Recovering log #11
+2023/09/19-07:50:27.332 37b Reusing old log /home/abhi/.config/BraveSoftware/Brave-Browser/Default/Local Extension Settings/nngceckbapebfimnlniiiahkandclblb/000011.log 
+2023/09/19-07:50:29.850 37b Level-0 table #16: started
+2023/09/19-07:50:29.864 37b Level-0 table #16: 2672167 bytes OK
+2023/09/19-07:50:29.866 37b Delete type=0 #11
+2023/09/19-07:55:22.190 37a Compacting 1@1 + 1@2 files
+2023/09/19-07:55:22.206 37a Generated table #17@1: 6 keys, 81131 bytes
+2023/09/19-07:55:22.206 37a Compacted 1@1 + 1@2 files => 81131 bytes
+2023/09/19-07:55:22.210 37a compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/19-07:55:22.210 37a Delete type=2 #16
+2023/09/19-07:55:22.210 37a Delete type=2 #13

@@ -1,0 +1,7 @@
+2023/09/18-14:28:37.570 3c3 Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/18-14:28:37.570 3c3 Recovering log #3
+2023/09/18-14:28:37.580 3c3 Reusing old log /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/000003.log 
+2023/09/18-14:54:51.526 3c4 Level-0 table #5: started
+2023/09/18-14:54:51.535 3c4 Level-0 table #5: 437936 bytes OK
+2023/09/18-14:54:51.541 3c4 Delete type=0 #3
+2023/09/18-14:54:51.543 3c4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

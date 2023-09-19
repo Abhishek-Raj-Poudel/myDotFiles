@@ -1,0 +1,47 @@
+{
+   "author": "George Martinec (https://github.com/george-martinec)",
+   "description": "Google Chrome Nord Theme",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnIdmvwe5bGHXV/AbPZyK4i1Ag5bpFPELy4zFTXuUYTpZTR0iWXv5X8ZgYkO6DRrN/ipP5hzB/uGparl6cDcQ8XC7dNKrNGRBVPHHTGodJN2nFKYpfSbraYiV4rY/zoOmU4PhZ1FELl77cv3y/FIycfWzq4QK74Z2FkgOjo7RBBTiw2s4PHM+Lcl8/gA1XskrZRbl+yilYBUfdMgx5m7iTnsdJ8Mg2bkALp0zlGYsTcf4Yn1qgsZ71v9mn6IIKn4EeS2FDIRn26jS9LyFErvn4AU2ynGewkzU33ELhBQjXtgjNIKqsl5LZ95vToeCyZTlgkA3jhvXOYgzmkrsOhAlVwIDAQAB",
+   "manifest_version": 3,
+   "name": "Google Chrome Nord Theme",
+   "theme": {
+      "colors": {
+         "background_tab": [ 49, 55, 68 ],
+         "background_tab_inactive": [ 34, 39, 48 ],
+         "background_tab_incognito": [ 49, 55, 68 ],
+         "background_tab_incognito_inactive": [ 34, 39, 48 ],
+         "bookmark_text": [ 216, 222, 233 ],
+         "frame": [ 49, 55, 68 ],
+         "frame_inactive": [ 34, 39, 48 ],
+         "frame_incognito": [ 49, 55, 68 ],
+         "frame_incognito_inactive": [ 34, 39, 48 ],
+         "ntp_attribution": [ 216, 222, 233 ],
+         "ntp_background": [ 49, 55, 68 ],
+         "ntp_header": [ 216, 222, 233 ],
+         "ntp_section": [ 216, 222, 233 ],
+         "ntp_text": [ 216, 222, 233 ],
+         "tab_background_text": [ 216, 222, 233 ],
+         "tab_background_text_inactive": [ 216, 222, 233 ],
+         "tab_background_text_incognito": [ 216, 222, 233 ],
+         "tab_background_text_incognito_inactive": [ 216, 222, 233 ],
+         "tab_text": [ 216, 222, 233 ],
+         "toolbar": [ 69, 78, 95 ],
+         "toolbar_button": [ 216, 222, 233 ],
+         "toolbar_button_icon": [ 216, 222, 233 ],
+         "toolbar_text": [ 216, 222, 233 ]
+      },
+      "properties": {
+         "ntp_logo_alternate": 1
+      },
+      "tints": {
+         "background_tab": [ 0.61, 0.28, 0.88 ],
+         "buttons": [ 0.61, 0.28, 0.88 ],
+         "frame": [ 0.61, 0.28, 0.88 ],
+         "frame_inactive": [ 0.61, 0.28, 0.88 ],
+         "frame_incognito": [ 0.61, 0.28, 0.88 ],
+         "frame_incognito_inactive": [ 0.61, 0.28, 0.88 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

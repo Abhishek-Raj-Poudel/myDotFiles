@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "Nord",
+  "workbench.editorAssociations": {
+    "*.pyc": "default"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "JetBrains Mono, 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
