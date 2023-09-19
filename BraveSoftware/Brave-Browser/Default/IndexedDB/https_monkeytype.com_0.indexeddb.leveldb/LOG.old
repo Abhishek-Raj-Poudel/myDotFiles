@@ -1,0 +1,6 @@
+2023/09/17-08:33:36.750 44a Creating DB /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_monkeytype.com_0.indexeddb.leveldb since it was missing.
+2023/09/17-08:33:36.758 44a Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_monkeytype.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/17-08:33:36.802 453 Level-0 table #5: started
+2023/09/17-08:33:37.036 453 Level-0 table #5: 1228 bytes OK
+2023/09/17-08:33:37.055 453 Delete type=0 #3
+2023/09/17-08:33:37.055 44a Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

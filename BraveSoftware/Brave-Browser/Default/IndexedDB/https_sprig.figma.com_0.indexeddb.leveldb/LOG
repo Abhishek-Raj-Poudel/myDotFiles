@@ -1,0 +1,15 @@
+2023/09/18-22:16:56.036 370 Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_sprig.figma.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/18-22:16:56.036 370 Recovering log #4
+2023/09/18-22:16:56.036 370 Reusing old log /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_sprig.figma.com_0.indexeddb.leveldb/000004.log 
+2023/09/18-23:07:39.947 371 Level-0 table #8: started
+2023/09/18-23:07:39.949 371 Level-0 table #8: 190 bytes OK
+2023/09/18-23:07:39.952 371 Delete type=0 #4
+2023/09/18-23:07:39.952 371 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2023/09/18-23:07:39.952 371 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 226 : 1
+2023/09/18-23:07:39.952 371 Compacting 1@1 + 1@2 files
+2023/09/18-23:07:39.953 371 Generated table #9@1: 69 keys, 1222 bytes
+2023/09/18-23:07:39.953 371 Compacted 1@1 + 1@2 files => 1222 bytes
+2023/09/18-23:07:39.956 371 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/18-23:07:39.956 371 Delete type=2 #8
+2023/09/18-23:07:39.956 371 Delete type=2 #5
+2023/09/18-23:07:39.957 371 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 226 : 1 .. (end); will stop at (end)

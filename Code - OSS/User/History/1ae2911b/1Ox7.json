@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Nord",
+    "workbench.editorAssociations": {
+        "*.pyc": "default"
+    },
+    "files.autoSave": "afterDelay"
+}

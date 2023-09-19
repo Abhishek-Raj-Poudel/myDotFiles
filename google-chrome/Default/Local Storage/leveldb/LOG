@@ -1,0 +1,17 @@
+2023/09/18-16:16:39.869 3 Reusing MANIFEST /home/abhi/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2023/09/18-16:16:39.869 3 Recovering log #12
+2023/09/18-16:16:39.870 3 Reusing old log /home/abhi/.config/google-chrome/Default/Local Storage/leveldb/000012.log 
+2023/09/18-17:03:01.005 5 Level-0 table #16: started
+2023/09/18-17:03:01.011 5 Level-0 table #16: 178239 bytes OK
+2023/09/18-17:03:01.013 5 Delete type=0 #12
+2023/09/18-17:03:01.013 5 Compacting 4@0 + 0@1 files
+2023/09/18-17:03:01.020 5 Generated table #17@0: 149 keys, 320803 bytes
+2023/09/18-17:03:01.020 5 Compacted 4@0 + 0@1 files => 320803 bytes
+2023/09/18-17:03:01.022 5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/09/18-17:03:01.023 5 Delete type=2 #7
+2023/09/18-17:03:01.023 5 Delete type=2 #11
+2023/09/18-17:03:01.023 5 Delete type=2 #16
+2023/09/18-17:03:01.023 5 Delete type=2 #13
+2023/09/18-17:18:07.651 5 Level-0 table #19: started
+2023/09/18-17:18:07.657 5 Level-0 table #19: 175949 bytes OK
+2023/09/18-17:18:07.661 5 Delete type=0 #15

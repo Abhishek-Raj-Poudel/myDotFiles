@@ -1,0 +1,6 @@
+2023/09/18-16:09:00.427 3c3 Creating DB /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_webflow.com_0.indexeddb.leveldb since it was missing.
+2023/09/18-16:09:00.436 3c3 Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_webflow.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/18-16:09:05.881 3c4 Level-0 table #5: started
+2023/09/18-16:09:05.884 3c4 Level-0 table #5: 3099 bytes OK
+2023/09/18-16:09:05.889 3c4 Delete type=0 #3
+2023/09/18-16:09:05.889 3c4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

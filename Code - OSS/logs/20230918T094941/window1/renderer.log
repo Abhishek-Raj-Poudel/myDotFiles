@@ -1,0 +1,26 @@
+2023-09-18 09:49:43.807 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: blade
+2023-09-18 09:49:43.807 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: ejs
+2023-09-18 09:49:43.807 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: latte
+2023-09-18 09:49:43.807 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: tpl
+2023-09-18 09:49:43.808 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: twig
+2023-09-18 09:49:43.808 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: vue-html
+2023-09-18 09:49:43.808 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: django-html
+2023-09-18 09:49:43.808 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: jinja-html
+2023-09-18 09:49:43.809 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: erb
+2023-09-18 09:49:43.809 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: HTML (Eex)
+2023-09-18 09:49:43.809 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: volt
+2023-09-18 09:49:43.809 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: nunjucks
+2023-09-18 09:49:46.813 [info] [perf] Render performance baseline is 173ms
+2023-09-18 09:49:57.458 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: blade
+2023-09-18 09:49:57.458 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: ejs
+2023-09-18 09:49:57.458 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: latte
+2023-09-18 09:49:57.459 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: tpl
+2023-09-18 09:49:57.459 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: twig
+2023-09-18 09:49:57.459 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: vue-html
+2023-09-18 09:49:57.459 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: django-html
+2023-09-18 09:49:57.459 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: jinja-html
+2023-09-18 09:49:57.459 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: erb
+2023-09-18 09:49:57.460 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: HTML (Eex)
+2023-09-18 09:49:57.460 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: volt
+2023-09-18 09:49:57.460 [error] [HansUXdev.bootstrap5-snippets]: Unknown language in `contributes.bootstrap5-snippets.language`. Provided value: nunjucks
+2023-09-18 09:50:02.623 [info] [perf] Render performance baseline is 166ms

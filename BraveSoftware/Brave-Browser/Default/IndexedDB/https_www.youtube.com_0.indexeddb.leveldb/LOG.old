@@ -1,0 +1,42 @@
+2023/09/18-20:51:26.632 37e Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/18-20:51:26.632 37e Recovering log #186
+2023/09/18-20:51:26.638 37e Reusing old log /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000186.log 
+2023/09/18-20:51:37.029 371 Level-0 table #192: started
+2023/09/18-20:51:37.042 371 Level-0 table #192: 1442811 bytes OK
+2023/09/18-20:51:37.048 371 Delete type=0 #186
+2023/09/18-20:56:18.576 371 Compacting 1@1 + 1@2 files
+2023/09/18-20:56:18.581 371 Generated table #193@1: 424 keys, 51136 bytes
+2023/09/18-20:56:18.581 371 Compacted 1@1 + 1@2 files => 51136 bytes
+2023/09/18-20:56:18.585 371 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/18-20:56:18.586 371 Delete type=2 #189
+2023/09/18-20:56:18.586 371 Delete type=2 #192
+2023/09/18-21:11:19.581 371 Level-0 table #195: started
+2023/09/18-21:11:19.594 371 Level-0 table #195: 1050908 bytes OK
+2023/09/18-21:11:19.597 371 Delete type=0 #191
+2023/09/18-21:11:22.999 370 Compacting 1@1 + 1@2 files
+2023/09/18-21:11:23.003 370 Generated table #196@1: 419 keys, 36975 bytes
+2023/09/18-21:11:23.003 370 Compacted 1@1 + 1@2 files => 36975 bytes
+2023/09/18-21:11:23.005 370 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/18-21:11:23.006 370 Delete type=2 #193
+2023/09/18-21:11:23.006 370 Delete type=2 #195
+2023/09/18-21:20:47.589 371 Level-0 table #198: started
+2023/09/18-21:20:47.608 371 Level-0 table #198: 1858171 bytes OK
+2023/09/18-21:20:47.613 371 Delete type=0 #194
+2023/09/18-21:23:41.353 371 Compacting 1@1 + 1@2 files
+2023/09/18-21:23:41.366 371 Generated table #199@1: 437 keys, 75245 bytes
+2023/09/18-21:23:41.366 371 Compacted 1@1 + 1@2 files => 75245 bytes
+2023/09/18-21:23:41.371 371 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/18-21:23:41.371 371 Delete type=2 #198
+2023/09/18-21:23:41.371 371 Delete type=2 #196
+2023/09/18-22:16:15.005 370 Level-0 table #201: started
+2023/09/18-22:16:15.012 370 Level-0 table #201: 694791 bytes OK
+2023/09/18-22:16:15.015 370 Delete type=0 #197
+2023/09/18-22:16:15.015 370 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2023/09/18-22:16:15.015 370 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x0f\x01\x1f\x03\x00\xa0n\x82\x0a yB\x00\x01\x1c\x00y\x00t\x00-\x00m\x00i\x00n\x00i\x00p\x00l\x00a\x00y\x00e\x00r\x00-\x00s\x00h\x00o\x00w\x00n\x00-\x00v\x00i\x00d\x00e\x00o\x00-\x00i\x00d' @ 277071 : 1
+2023/09/18-22:16:15.015 370 Compacting 1@1 + 1@2 files
+2023/09/18-22:16:15.018 370 Generated table #202@1: 364 keys, 47322 bytes
+2023/09/18-22:16:15.018 370 Compacted 1@1 + 1@2 files => 47322 bytes
+2023/09/18-22:16:15.021 370 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/18-22:16:15.021 370 Delete type=2 #201
+2023/09/18-22:16:15.021 370 Delete type=2 #199
+2023/09/18-22:16:15.022 370 Manual compaction at level-1 from '\x00\x0f\x01\x1f\x03\x00\xa0n\x82\x0a yB\x00\x01\x1c\x00y\x00t\x00-\x00m\x00i\x00n\x00i\x00p\x00l\x00a\x00y\x00e\x00r\x00-\x00s\x00h\x00o\x00w\x00n\x00-\x00v\x00i\x00d\x00e\x00o\x00-\x00i\x00d' @ 277071 : 1 .. (end); will stop at (end)
