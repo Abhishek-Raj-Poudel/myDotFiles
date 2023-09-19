@@ -1,3 +1,15 @@
-2023/09/18-09:44:40.639 5f7 Reusing MANIFEST /home/abhi/.config/Slack/Local Storage/leveldb/MANIFEST-000001
-2023/09/18-09:44:40.640 5f7 Recovering log #14
-2023/09/18-09:44:40.641 5f7 Reusing old log /home/abhi/.config/Slack/Local Storage/leveldb/000014.log 
+2023/09/18-10:35:07.877 d0c Reusing MANIFEST /home/abhi/.config/Slack/Local Storage/leveldb/MANIFEST-000001
+2023/09/18-10:35:07.878 d0c Recovering log #14
+2023/09/18-10:35:07.883 d0c Reusing old log /home/abhi/.config/Slack/Local Storage/leveldb/000014.log 
+2023/09/18-13:33:38.494 d0d Level-0 table #18: started
+2023/09/18-13:33:38.504 d0d Level-0 table #18: 16456 bytes OK
+2023/09/18-13:33:38.509 d0d Delete type=0 #14
+2023/09/18-13:33:38.510 d0d Compacting 4@0 + 1@1 files
+2023/09/18-13:33:38.513 d0d Generated table #19@0: 9 keys, 3574 bytes
+2023/09/18-13:33:38.513 d0d Compacted 4@0 + 1@1 files => 3574 bytes
+2023/09/18-13:33:38.517 d0d compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/09/18-13:33:38.517 d0d Delete type=2 #12
+2023/09/18-13:33:38.517 d0d Delete type=2 #7
+2023/09/18-13:33:38.518 d0d Delete type=2 #10
+2023/09/18-13:33:38.518 d0d Delete type=2 #15
+2023/09/18-13:33:38.518 d0d Delete type=2 #18

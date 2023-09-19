@@ -11,11 +11,10 @@
             "file:///etc/ssh": "__default__profile__",
             "file:///home/abhi/.ssh": "__default__profile__",
             "file:///home/abhi/.config/qtile": "__default__profile__",
-            "file:///home/abhi/projects/infinity-digital-agency-website": "__default__profile__"
+            "file:///home/abhi/projects/infinity-digital-agency-website": "__default__profile__",
+            "file:///home/abhi/.config": "__default__profile__"
         },
-        "emptyWindows": {
-            "1695035575109": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "profileAssociationsMigration": true,
     "telemetry.machineId": "51f8ef7a46bc1eaaebc76282d38ed3e7db5e662fe5d64c212db31c572ae33e04",
@@ -23,7 +22,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/abhi/projects/infinity-digital-agency-website"
+                "folderUri": "file:///home/abhi/.config"
             }
         ],
         "emptyWindows": []
@@ -66,11 +65,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/abhi/.config",
+                                        "path": "/home/abhi/.config",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -172,18 +181,29 @@
                                     "label": "~/projects/mk-printers"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/abhi/.config/kitty",
-                                        "path": "/home/abhi/.config/kitty",
+                                        "external": "file:///home/abhi/.config/htop/htoprc",
+                                        "path": "/home/abhi/.config/htop/htoprc",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.config/kitty"
+                                    "label": "~/.config/htop/htoprc"
                                 },
                                 {
-                                    "id": "vscode.menubar.separator"
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/abhi/.config/picom/picom.conf",
+                                        "path": "/home/abhi/.config/picom/picom.conf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/picom/picom.conf"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -241,17 +261,6 @@
                                     "label": "~/.config/neofetch/config.conf"
                                 },
                                 {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/abhi/.config/picom/picom.conf",
-                                        "path": "/home/abhi/.config/picom/picom.conf",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.config/picom/picom.conf"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -307,6 +316,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -382,12 +398,20 @@
                                     "label": "&&Settings"
                                 },
                                 {
+                                    "id": "workbench.view.extensions",
+                                    "label": "&&Extensions"
+                                },
+                                {
                                     "id": "workbench.action.openGlobalKeybindings",
                                     "label": "Keyboard Shortcuts"
                                 },
                                 {
                                     "id": "workbench.action.openSnippets",
                                     "label": "Configure User Snippets"
+                                },
+                                {
+                                    "id": "workbench.action.tasks.openUserTasks",
+                                    "label": "User Tasks"
                                 },
                                 {
                                     "id": "submenuitem.ThemesSubMenu",
@@ -577,6 +601,10 @@
                     },
                     {
                         "id": "vscode.menubar.separator"
+                    },
+                    {
+                        "id": "workbench.action.toggleMultiCursorModifier",
+                        "label": "Switch to Ctrl+Click for Multi-Cursor"
                     },
                     {
                         "id": "editor.action.toggleColumnSelection",
@@ -871,8 +899,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -881,8 +908,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1291,6 +1317,10 @@
                         "label": "&&Search Feature Requests"
                     },
                     {
+                        "id": "workbench.action.openIssueReporter",
+                        "label": "Report &&Issue"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -1359,6 +1389,10 @@
             "workbench.action.openSettings": {
                 "label": "Ctrl+,",
                 "userSettingsLabel": "ctrl+,"
+            },
+            "workbench.view.extensions": {
+                "label": "Ctrl+Shift+X",
+                "userSettingsLabel": "ctrl+shift+x"
             },
             "workbench.action.openGlobalKeybindings": {
                 "label": "Ctrl+K Ctrl+S",
@@ -1550,10 +1584,6 @@
             "workbench.view.debug": {
                 "label": "Ctrl+Shift+D",
                 "userSettingsLabel": "ctrl+shift+d"
-            },
-            "workbench.view.extensions": {
-                "label": "Ctrl+Shift+X",
-                "userSettingsLabel": "ctrl+shift+x"
             },
             "workbench.actions.view.problems": {
                 "label": "Ctrl+Shift+M",
@@ -1781,13 +1811,13 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/abhi/projects/infinity-digital-agency-website",
-            "backupPath": "/home/abhi/.config/Code - OSS/Backups/501118cbb51a057bbc1615cf63c24555",
+            "folder": "file:///home/abhi/.config",
+            "backupPath": "/home/abhi/.config/Code - OSS/Backups/7798771d668d8bdba11273c3c4f642ab",
             "uiState": {
                 "mode": 1,
-                "x": 0,
+                "x": 960,
                 "y": 30,
-                "width": 1916,
+                "width": 956,
                 "height": 1046
             }
         },
