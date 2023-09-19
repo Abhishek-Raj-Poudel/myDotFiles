@@ -34,7 +34,9 @@ from themes import Dracula, Midnight, Monokai, Tomorrow, One_dark, Nordic, Catpp
 from qtile_extras import widget
 from qtile_extras.widget import WiFiIcon
 from qtile_extras.widget.decorations import PowerLineDecoration
-# from qtile_extras.widget.decorations import BrightnessControl
+
+import os
+from datetime import datetime
 
 
 
@@ -48,6 +50,11 @@ terminal = guess_terminal()
 # theme = One_dark
 theme = Nordic
 # theme = Catppuccin
+
+
+screenshot_dir = "/home/abhi/Screenshots/"  # Set your desired directory here
+
+
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -108,7 +115,22 @@ keys = [
     Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+
+
+
+
+# Take screenshot
+# Take a whole-screen screenshot with Win + PrtSc
+    Key([mod], "Print",
+        lazy.function(lambda qtile: qtile.cmd_spawn(f"maim {screenshot_dir}/screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"))
+    ),
+
+    # Take a screenshot of a selected area with Win + Shift + S
+    Key([mod, "shift"], "s",
+        lazy.function(lambda qtile: qtile.cmd_spawn(f"maim -s {screenshot_dir}/selected_screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"))
+),
+
+
 ]
 
 groups = [Group(i) for i in "12345"]
@@ -123,15 +145,6 @@ for i in groups:
                 lazy.group[i.name].toscreen(),
                 desc="Switch to group {}".format(i.name),
             ),
-            # mod1 + shift + letter of group = switch to & move focused window to group
-            # Key(
-            #     [mod, "shift"],
-            #     i.name,
-            #     lazy.window.togroup(i.name, switch_group=True),
-            #     desc="Switch to & move focused window to group {}".format(i.name),
-            # ),
-            # Or, use below if you prefer not to switch to that group.
-            # # mod1 + shift + letter of group = move focused window to group
             Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
                 desc="move focused window to group {}".format(i.name)),
         ]
@@ -142,17 +155,6 @@ layouts = [
         border_focus=theme["blue"],
         border_width=2),
     layout.Max(),
-    # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
-    # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
 ]
 
 
@@ -169,26 +171,18 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.CurrentLayoutIcon(scale=.6),
-                # widget.CurrentLayout(),
-                # widget.TextBox("•", foreground=theme["BG1"]),
-                
-                # Date
-
                 widget.TextBox("•", foreground=theme["BG1"]),
                 widget.TextBox("",foreground=theme["blue"],padding=7),
                 widget.Clock(format="%Y-%m-%d %a"),
                 widget.TextBox("•", foreground=theme["BG1"]),
 
                 # Time
-                # widget.TextBox("TIME:", foreground=theme["BG6"]),
                 widget.TextBox("",foreground=theme["blue"],padding=7),
                 widget.Clock(format="%I:%M %p"),
 
                 widget.Spacer(),
 
                 widget.GroupBox(
-                    # highlight_method='line',
                     highlight_method='text',
                     foreground=theme["foreground"],
                     active = theme["white"],
@@ -202,21 +196,11 @@ screens = [
 
                 widget.Spacer(),
 
-                # widget.TextBox("•", foreground=theme["BG1"]),
-
-                # widget.Prompt(),                
-                # widget.WindowName(),
-                # widget.WindowName(foreground=theme["blue"]),
-
                 widget.Pomodoro(
                     color_inactive=theme["red"],
                     color_active=theme["green"],
                     color_break=theme["yellow"] ),
                 widget.TextBox("•", foreground=theme["BG1"]),
-
-                # Add clipboard icon
-                # widget.Clipboard(),
-                # widget.TextBox("•", foreground=theme["BG1"]),
 
 # for brightness
                 widget.TextBox("󰃝", foreground=theme["blue"],padding=7),
@@ -245,35 +229,9 @@ screens = [
                 widget.TextBox("",foreground=theme["blue"],padding=10),
                 widget.Battery(discharge_char='',format='{percent:1.0%}'),
                 widget.TextBox("•", foreground=theme["BG1"]),
-
-                # Probably not needed
-
-                # WiFiIcon(),
-
-                # Needed but doesn't work
-                # widget.Wlan(),
-                # widget.TextBox("•", foreground=theme["BG1"]),
-
-
-                # widget.Chord(
-                #     chords_colors={
-                #         "launch": ("#ff0000", "#ffffff"),
-                #     },
-                #     name_transform=lambda name: name.upper(),
-                # ),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-
-                # widget.StatusNotifier(),
-
-                # widget.TextBox(" "),
-                # widget.QuickExit(),
             ],
             30,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
             background=theme['background'],
-            # padding=10
-            
         ),
     ),
 ]
