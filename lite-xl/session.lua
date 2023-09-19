@@ -1,1 +1,0 @@
-return {recents={[1]="/home/abhi",[2]="/home/abhi/Notes/Abhi's vault pc/.obsidian/themes/Obsidian Nord"}, window={[1]=1920,[2]=1050,[3]=0,[4]=30,["n"]=4}, window_mode="normal", previous_find={}, previous_replace={}}
