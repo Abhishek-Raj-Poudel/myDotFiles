@@ -1,7 +1,0 @@
-2023/09/18-11:59:48.470 3c3 Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.atlassian.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/09/18-11:59:48.470 3c3 Recovering log #3
-2023/09/18-11:59:48.471 3c3 Reusing old log /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.atlassian.com_0.indexeddb.leveldb/000003.log 
-2023/09/18-12:00:05.041 3c4 Level-0 table #5: started
-2023/09/18-12:00:05.044 3c4 Level-0 table #5: 90143 bytes OK
-2023/09/18-12:00:05.046 3c4 Delete type=0 #3
-2023/09/18-12:00:05.046 3c4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
