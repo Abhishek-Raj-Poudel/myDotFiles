@@ -1,7 +1,0 @@
-[Global] Creating projects: [{"folder":"/home/abhi/projects/infinity-digital-agency-website","configPath":"/home/abhi/projects/infinity-digital-agency-website/tailwind.config.js","isUserConfigured":false,"documentSelector":[{"pattern":"/home/abhi/projects/infinity-digital-agency-website/tailwind.config.js","priority":0},{"pattern":"/home/abhi/projects/infinity-digital-agency-website/views/**/*.{html,ejs}","priority":1},{"pattern":"/home/abhi/projects/infinity-digital-agency-website/node_modules/tw-elements/dist/js/**/*.js","priority":1},{"pattern":"/home/abhi/projects/infinity-digital-agency-website/**","priority":3}]}]
-[Global] Adding watch patterns: /home/abhi/projects/infinity-digital-agency-website/tailwind.config.js, /home/abhi/projects/infinity-digital-agency-website
-[tailwind.config.js] Initializing...
-[tailwind.config.js] Loaded Tailwind CSS config file: /home/abhi/projects/infinity-digital-agency-website/tailwind.config.js
-[tailwind.config.js] Loaded postcss v8.4.29: /home/abhi/projects/infinity-digital-agency-website/node_modules/postcss
-[tailwind.config.js] Loaded tailwindcss v3.3.3: /home/abhi/projects/infinity-digital-agency-website/node_modules/tailwindcss
-[tailwind.config.js] Building...
