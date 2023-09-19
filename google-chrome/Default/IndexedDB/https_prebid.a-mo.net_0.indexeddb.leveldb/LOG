@@ -1,6 +1,0 @@
-2023/09/18-16:34:27.738 be6a Creating DB /home/abhi/.config/google-chrome/Default/IndexedDB/https_prebid.a-mo.net_0.indexeddb.leveldb since it was missing.
-2023/09/18-16:34:27.742 be6a Reusing MANIFEST /home/abhi/.config/google-chrome/Default/IndexedDB/https_prebid.a-mo.net_0.indexeddb.leveldb/MANIFEST-000001
-2023/09/18-16:59:06.513 be60 Level-0 table #5: started
-2023/09/18-16:59:06.516 be60 Level-0 table #5: 1252 bytes OK
-2023/09/18-16:59:06.524 be60 Delete type=0 #3
-2023/09/18-16:59:06.524 be60 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
