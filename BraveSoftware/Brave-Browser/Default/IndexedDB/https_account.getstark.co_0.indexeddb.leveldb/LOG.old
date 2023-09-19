@@ -1,6 +1,0 @@
-2023/09/16-07:28:48.063 399 Creating DB /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_account.getstark.co_0.indexeddb.leveldb since it was missing.
-2023/09/16-07:28:48.071 399 Reusing MANIFEST /home/abhi/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_account.getstark.co_0.indexeddb.leveldb/MANIFEST-000001
-2023/09/16-07:28:48.090 399 Level-0 table #5: started
-2023/09/16-07:28:48.093 399 Level-0 table #5: 1236 bytes OK
-2023/09/16-07:28:48.099 399 Delete type=0 #3
-2023/09/16-07:28:48.099 399 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
