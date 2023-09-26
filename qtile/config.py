@@ -15,16 +15,10 @@ from datetime import datetime
 mod = "mod4"
 mod1 = "mod1"
 terminal = guess_terminal()
-# theme = Dracula
-# theme = Midnight
-# theme = Monokai
-# theme = Tomorrow
-# theme = One_dark
 theme = Nordic
-# theme = Catppuccin
 
-
-screenshot_dir = "/home/abhi/Screenshots/"  # Set your desired directory here
+#: Set your desired screenshots directory
+screenshot_dir = "/home/abhi/Screenshots/" 
 
 
 
@@ -33,27 +27,23 @@ keys = [
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod1], "Tab", lazy.layout.next(), desc="Move focus to other window"),
+    Key([mod1], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     # Move windows around
      # Move focus to the next screen
-    Key([ mod, "control" ], "Right",
-        lazy.screen.next_group(),
-        desc="Move focus to the next screen"),
-    
+    Key([mod], "Right",lazy.screen.next_group(),desc="Move focus to the next screen"),
     # Move focus to the previous screen
-    Key([ mod, "control" ], "Left",
-        lazy.screen.prev_group(),
-        desc="Move focus to the previous screen"),
-    #Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "Left",lazy.screen.prev_group(),desc="Move focus to the previous screen"),
+
+    # Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([mod, "shift"], "left", lazy.layout.shuffle_left(), desc="Move window to the left"),
+    Key([mod, "shift"], "right", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "down", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod, "shift"], "up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
@@ -61,16 +51,18 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
+    #: Toggle between split and unsplit sides of stack.
+    #: Split = all windows displayed
+    #: Unsplit = 1 window displayed, like Max layout, but still with
+    #: multiple stack panes
     # Key(
     #     [mod, "shift"],
     #     "Return",
     #     lazy.layout.toggle_split(),
     #     desc="Toggle between split and unsplit sides of stack",
     # ),
+
+    # Lunch software and codes
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod,"shift"], "w", lazy.spawn('brave'), desc="Launch Browser"),
     Key([mod,"shift"], "f", lazy.spawn('thunar'), desc="Launch File Browser"),
@@ -105,7 +97,7 @@ groups = [Group(i) for i in "123456"]
 for i in groups:
     keys.extend(
         [
-            # mod1 + letter of group = switch to group
+            #: mod1 + letter of group = switch to group
             Key(
                 [mod],
                 i.name,
@@ -130,7 +122,7 @@ widget_defaults = dict(
     font="JetBrains Mono",
     fontsize=14,
     padding=4,
-    border_color= theme["cyan"]
+    border_color= theme["blue"]
 )
 extension_defaults = widget_defaults.copy()
 
@@ -192,6 +184,12 @@ screens = [
                 widget.ThermalSensor(),
                 widget.TextBox("•", foreground=theme["BG1"]),
 
+# Check Updates               
+
+                widget.TextBox("",foreground=theme["blue"],padding=7),
+                widget.CheckUpdates(display_format='{updates}'),
+                widget.TextBox("•", foreground=theme["BG1"]),
+                
 # battery
                 widget.TextBox("",foreground=theme["blue"],padding=10),
                 widget.Battery(discharge_char='',format='{percent:1.0%}'),
