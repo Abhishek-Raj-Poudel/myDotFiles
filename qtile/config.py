@@ -159,11 +159,11 @@ widget.Notify(),
 
                 widget.Spacer(),
 
-                widget.Pomodoro(
-                    color_inactive=theme["red"],
-                    color_active=theme["green"],
-                    color_break=theme["yellow"] ),
-                widget.TextBox("|", foreground=theme["BG1"]),
+                # widget.Pomodoro(
+                #     color_inactive=theme["red"],
+                #     color_active=theme["green"],
+                #     color_break=theme["yellow"] ),
+                # widget.TextBox("|", foreground=theme["BG1"]),
 
 # for brightness
                 widget.TextBox("󰃝", foreground=theme["blue"],padding=7),
