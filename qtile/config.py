@@ -2,7 +2,7 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-from themes import Dracula, Midnight, Monokai, Tomorrow, One_dark, Nordic, Catppuccin
+from themes import Dracula, Midnight, Monokai, Tomorrow, One_dark, Nordic, Catppuccin, Custom
 from qtile_extras import widget
 from qtile_extras.widget import WiFiIcon
 from qtile_extras.widget.decorations import PowerLineDecoration
@@ -15,8 +15,7 @@ from datetime import datetime
 mod = "mod4"
 mod1 = "mod1"
 terminal = guess_terminal()
-theme = Nordic
-
+theme = Custom
 #: Set your desired screenshots directory
 screenshot_dir = "/home/abhi/Screenshots/" 
 
@@ -33,17 +32,17 @@ keys = [
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     # Move windows around
      # Move focus to the next screen
-    Key([mod], "Right",lazy.screen.next_group(),desc="Move focus to the next screen"),
+    Key([mod,"control"], "Right",lazy.screen.next_group(),desc="Move focus to the next screen"),
     # Move focus to the previous screen
-    Key([mod], "Left",lazy.screen.prev_group(),desc="Move focus to the previous screen"),
+    Key([mod,"control"], "Left",lazy.screen.prev_group(),desc="Move focus to the previous screen"),
 
     # Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "left", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "right", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "down", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "up", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([mod], "left", lazy.layout.shuffle_left(), desc="Move window to the left"),
+    Key([mod], "right", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod], "down", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod], "up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
@@ -68,6 +67,7 @@ keys = [
     Key([mod,"shift"], "f", lazy.spawn('thunar'), desc="Launch File Browser"),
     Key([mod,"shift"], "c", lazy.spawn('slack'), desc="Launch Chat app"),
     Key([mod,"shift"], "n", lazy.spawn('obsidian'), desc="Launch Chat app"),
+    Key([mod,"shift"], "p", lazy.spawn('code'), desc="Launch Chat app"),
 
     # Lunch rofi for different things
     Key([mod], "Tab", lazy.spawn('rofi -show window -show-icons'), desc="Launch Rofi to toggle between windows"),
@@ -139,6 +139,10 @@ screens = [
                 widget.TextBox("",foreground=theme["blue"],padding=7),
                 widget.Clock(format="%I:%M %p"),
 
+widget.TextBox("•", foreground=theme["BG1"]),
+widget.TextBox("󰍡",foreground=theme["blue"]),
+widget.Notify(),
+
                 widget.Spacer(),
 
                 widget.GroupBox(
@@ -159,7 +163,7 @@ screens = [
                     color_inactive=theme["red"],
                     color_active=theme["green"],
                     color_break=theme["yellow"] ),
-                widget.TextBox("•", foreground=theme["BG1"]),
+                widget.TextBox("|", foreground=theme["BG1"]),
 
 # for brightness
                 widget.TextBox("󰃝", foreground=theme["blue"],padding=7),
@@ -169,26 +173,31 @@ screens = [
                     foreground=theme["green"],
                     scroll=True,
                     ),
-                widget.TextBox("•", foreground=theme["BG1"]),
+                widget.TextBox("|", foreground=theme["BG1"]),
                 widget.TextBox("",foreground=theme["blue"],padding=7),
                 widget.PulseVolume(foreground=theme["green"]),
-                widget.TextBox("•", foreground=theme["BG1"]),
+                widget.TextBox("|", foreground=theme["BG1"]),
 
+           # WiFiIcon(),
 
+                
+
+# cpu 
                 widget.TextBox("",foreground=theme["blue"],padding=7 ),
                 widget.CPU(format='{load_percent}%'),
                 widget.TextBox("•", foreground=theme["BG1"]),
-
 # cpu temp
-                widget.TextBox("",foreground=theme["blue"]),
                 widget.ThermalSensor(),
-                widget.TextBox("•", foreground=theme["BG1"]),
-
+                widget.TextBox("|", foreground=theme["BG1"]),
+# gpu temp
+                widget.TextBox("󰘚",foreground=theme["blue"]),
+                widget.NvidiaSensors(),
+                widget.TextBox("|", foreground=theme["BG1"]),
 # Check Updates               
 
                 widget.TextBox("",foreground=theme["blue"],padding=7),
                 widget.CheckUpdates(display_format='{updates}'),
-                widget.TextBox("•", foreground=theme["BG1"]),
+                widget.TextBox("|", foreground=theme["BG1"]),
                 
 # battery
                 widget.TextBox("",foreground=theme["blue"],padding=10),

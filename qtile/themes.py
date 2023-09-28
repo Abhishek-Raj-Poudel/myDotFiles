@@ -157,3 +157,25 @@ Catppuccin = {
     "BG5":        "454f61",
     "BG6":        "4b5563",
     }
+
+Custom = {
+    "foreground": "f8f8f2",
+    "background": "21242B",
+    "black":      "282a36",
+    "white":      "f8f8f2",
+    "red":        "ff5555",
+    "green":      "50fa7b",
+    "yellow":     "f1fa8c",
+    "blue":       "bd93f9",
+    "orange":     "ffb86c",
+    "magenta":    "ff79c6",
+    "cyan":       "8be9fd",
+    "on":         "7B65A3",
+    "BG":         "21242B",
+    "BG1":        "272B34",
+    "BG2":        "2D313D",
+    "BG3":        "333747",
+    "BG4":        "393D51",
+    "BG5":        "3F425B",
+    "BG6":        "454863",
+}
