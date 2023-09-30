@@ -42,8 +42,11 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(
-        border_focus=theme["magenta"],
-        border_width=2),
+        border_focus=theme["BG1"],
+        border_width=1,
+        marign=8
+        ),
+
     layout.Max(),
 ]
 
@@ -126,7 +129,8 @@ screens = [
                 widget.TextBox("•", foreground=theme["BG1"]),
             ],
             30,
-        background=theme['background'],
+        #background=theme['background'],
+        background='191724e6',
         ),
     ),
 ]

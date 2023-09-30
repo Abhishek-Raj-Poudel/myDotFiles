@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 10x10
+    offset = 10x30
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -73,7 +73,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 0
+    transparency = 00
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -92,7 +92,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 2
 
     # Defines color of the frame around the notification window.
     frame_color = "#aaaaaa"
@@ -315,7 +315,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#191724"
     foreground = "#e0def4"
-    frame_color = "#191724"
+    frame_color = "#26233a"
     timeout = 12
  # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -323,7 +323,7 @@
 [urgency_normal]
     background = "#191724"
     foreground = "#e0def4"
-    frame_color = "#191724"
+    frame_color = "#f6c177"
     timeout = 12
 # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
