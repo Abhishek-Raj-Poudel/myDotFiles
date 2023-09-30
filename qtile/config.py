@@ -14,13 +14,15 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 import os
 from datetime import datetime
 
+# theme to choose
+# theme = Custom
 theme =Custom
 
 # Keybindings
 keys = bindings
 
 
-groups = [Group(i) for i in "123456"]
+groups = [Group(i) for i in "123456789"]
 
 for i in groups:
     keys.extend(
@@ -48,7 +50,7 @@ layouts = [
 
 
 widget_defaults = dict(
-    font="JetBrains Mono",
+    font="JetBrains Mono Nerd",
     fontsize=14,
     padding=4,
     border_color= theme["blue"],
@@ -60,10 +62,12 @@ screens = [
         top=bar.Bar(
             [
                 widget.TextBox("•", foreground=theme["BG1"]),
-                widget.TextBox("•", foreground=theme["BG1"]),
+                widget.TextBox("",foreground=theme["magenta"],padding=7),
+                widget.Clock(format="%Y-%m-%d %a"),
+                widget.TextBox("|", foreground=theme["BG1"]),
 
                 # Time
-                widget.TextBox("",foreground=theme["blue"],padding=7),
+                widget.TextBox("",foreground=theme["magenta"],padding=7),
                 widget.Clock(format="%I:%M %p"),
 
                 widget.Spacer(),
@@ -76,7 +80,7 @@ screens = [
                     this_current_screen_border= theme["yellow"],
                     urgent_border = theme["red"],
                     urgent_text = theme["red"],
-                    padding_x = 8
+                    padding_x = 14
                     
                     ),
 
@@ -84,27 +88,26 @@ screens = [
 
 
  #: Wifi
-                WiFiIcon(interface='wlp4s0',padding_x=10,padding_y=10,
-                active_colour=theme["green"],inactive_colour=theme['BG1']),
+                WiFiIcon(interface='wlp4s0',padding_x=8,padding_y=8,
+                active_colour=theme["magenta"],inactive_colour=theme['BG1']),
+                widget.TextBox("|", foreground=theme["BG1"]),
+
+#: for audio
+                widget.TextBox("",foreground=theme["magenta"],padding=7),
+                # widget.ALSAWidget(),
+                widget.PulseVolume(foreground=theme["magenta"]),
                 widget.TextBox("|", foreground=theme["BG1"]),
 
 #: for brightness
-                widget.TextBox("󰃝", foreground=theme["blue"],padding=7),
+                widget.TextBox("󰃝", foreground=theme["magenta"],padding=7),
                 widget.Backlight(
                     brightness_file="/sys/class/backlight/amdgpu_bl1/brightness",
                     max_brightness_file="/sys/class/backlight/amdgpu_bl1/max_brightness",
-                    foreground=theme["green"],
                     scroll=True,
                     ),
-#: for audio
                 widget.TextBox("|", foreground=theme["BG1"]),
-                widget.TextBox("",foreground=theme["blue"],padding=7),
-                # widget.ALSAWidget(),
-                widget.PulseVolume(foreground=theme["green"]),
-                widget.TextBox("|", foreground=theme["BG1"]),
-
 # cpu 
-                widget.TextBox("",foreground=theme["blue"],padding=7 ),
+                widget.TextBox("",foreground=theme["magenta"],padding=7 ),
                 widget.CPU(format='{load_percent}%'),
                 widget.TextBox("•", foreground=theme["BG1"]),
 
@@ -113,18 +116,17 @@ screens = [
                 widget.TextBox("|", foreground=theme["BG1"]),
 
 # battery
-                #widget.UPowerWidget(),
-                widget.TextBox("",foreground=theme["blue"],padding=9),
+                widget.TextBox("",padding=9),
                 widget.Battery(discharge_char='',format='{percent:1.0%}'),
                 widget.TextBox("|", foreground=theme["BG1"]),
 
 #: Check Updates               
                 # widget.TextBox("",foreground=theme["blue"],padding=7),
-                widget.CheckUpdates(display_format='  {updates}',distro='Arch_yay',foreground=theme["blue"]),
+                widget.CheckUpdates(display_format='  {updates}',distro='Arch_yay',foreground=theme["yellow"]),
                 widget.TextBox("•", foreground=theme["BG1"]),
             ],
             30,
-            background=theme['background'],
+        background=theme['background'],
         ),
     ),
 ]
@@ -141,24 +143,35 @@ dgroups_app_rules = []  # type: list
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-
 floating_layout = layout.Floating(
     float_rules=[
+        # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
-        Match(wm_class="confirmreset"), 
-        Match(wm_class="makebranch"),  
-        Match(wm_class="maketag"),  
-        Match(wm_class="ssh-askpass"), 
-        Match(title="branchdialog"),  
-        Match(title="pinentry"),  
+        Match(wm_class="confirmreset"),  # gitk
+        Match(wm_class="makebranch"),  # gitk
+        Match(wm_class="maketag"),  # gitk
+        Match(wm_class="ssh-askpass"),  # ssh-askpass
+        Match(title="branchdialog"),  # gitk
+        Match(title="pinentry"),  # GPG key password entry
     ]
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
 
+# If things like steam games want to auto-minimize themselves when losing
+# focus, should we respect this or not?
 auto_minimize = True
 
+# When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
+# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
+# string besides java UI toolkits; you can see several discussions on the
+# mailing lists, GitHub issues, and other WM documentation that suggest setting
+# this string if your java app doesn't work correctly. We may as well just lie
+# and say that we're a working one by default.
+#
+# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
+# java that happens to be on java's whitelist.
 wmname = "LG3D"
