@@ -34,10 +34,8 @@ bindings = [
     Key([mod], "up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "shift"], "Left", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "shift"], "Right", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "shift"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "shift"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod], "i", lazy.layout.grow()),
+    Key([mod], "m", lazy.layout.shrink()),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     
     # Lunch software and codes
@@ -58,9 +56,6 @@ bindings = [
     Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-#grow and shrink layout
-    Key([mod], "i", lazy.layout.grow()),
-    Key([mod], "m", lazy.layout.shrink()),
 
     # Take screenshot
     # Take a whole-screen screenshot with Win + PrtSc
@@ -72,4 +67,8 @@ bindings = [
     Key([mod, "shift"], "s",
        lazy.function(lambda qtile: qtile.cmd_spawn(f"maim -s {screenshot_dir}/selected_screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"))
     ),
+    # test
+    # Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
+    # Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+")),
+
 ]

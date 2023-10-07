@@ -66,6 +66,7 @@ screens = [
         bottom=bar.Bar(
             [
                 widget.TextBox("•", foreground=theme["BG1"]),
+                #Date
                 widget.TextBox("",foreground=theme["magenta"],padding=7),
                 widget.Clock(format="%Y-%m-%d %a"),
                 widget.TextBox("|", foreground=theme["BG1"]),
@@ -89,42 +90,50 @@ screens = [
                     ),
 
                 widget.Spacer(),
-               # widget.Memory(),
+
                  #: Wifi
                 WiFiIcon(interface='wlp4s0',padding_x=8,padding_y=8,
                 active_colour=theme["magenta"],inactive_colour=theme['BG1']),
                 widget.TextBox("|", foreground=theme["BG1"]),
 
-#: for audio
+                #: for audio
                 widget.TextBox("",foreground=theme["magenta"],padding=7),
                 widget.PulseVolume(foreground=theme["magenta"]),
                 widget.TextBox("|", foreground=theme["BG1"]),
-                #widget.Volume(channel='IEC958'),
 
-#: for brightness
+                #: for brightness
                 widget.TextBox("󰃝", foreground=theme["magenta"],padding=7),
                 widget.Backlight(
                     brightness_file="/sys/class/backlight/amdgpu_bl1/brightness",
                     max_brightness_file="/sys/class/backlight/amdgpu_bl1/max_brightness",
                     ),
                 widget.TextBox("|", foreground=theme["BG1"]),
-# cpu 
-                widget.TextBox("",padding=7 ),
-                widget.CPU(format='{load_percent}%'),
-                widget.TextBox("•", foreground=theme["BG1"]),
 
-# cpu temp
-                widget.ThermalSensor(),
-                widget.TextBox("|", foreground=theme["BG1"]),
-
-BatteryText(
+                #: Battery widget
+                BatteryText(
                     10,
                     foreground=theme["foreground"],
                     fontsize=14,
                 ),
-#: Check Updates
-                # widget.TextBox("",foreground=theme["blue"],padding=7),
+                widget.TextBox("|", foreground=theme["BG1"]),
+
+                #: Check Updates
                 widget.CheckUpdates(display_format='  {updates}',distro='Arch_yay',foreground=theme["yellow"]),
+                widget.TextBox("|", foreground=theme["BG1"]),
+
+                #: Widgit Box like hamburger menu for the bar 
+                widget.WidgetBox(widgets=[ 
+                    
+                # cpu 
+                widget.TextBox("",padding=7 ),
+                widget.CPU(format='{load_percent}%'),
+                # Cpu Temp 
+                widget.ThermalSensor(),
+                ],
+                text_open='󰅖',
+                text_closed='󰍜',
+                close_button_location='right'  
+                ),
                 widget.TextBox("•", foreground=theme["BG1"]),
             ],
             30,
