@@ -2,10 +2,13 @@ from libqtile.config import  Key, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+import os
+from datetime import datetime
+
 mod = "mod4"
 mod1 = "mod1"
 terminal = guess_terminal()
-screenshot_dir = "/home/abhi/Screenshots/" 
+screenshot_dir = "/home/abhi/pictures/screenshots" 
 
 bindings = [
     # A list of available commands that can be bound to keys can be found
@@ -13,7 +16,7 @@ bindings = [
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod1], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
+   # Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     # Move windows around
@@ -31,10 +34,10 @@ bindings = [
     Key([mod], "up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod, "shift"], "Left", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key([mod, "shift"], "Right", lazy.layout.grow_right(), desc="Grow window to the right"),
+    Key([mod, "shift"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
+    Key([mod, "shift"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     
     # Lunch software and codes
@@ -58,15 +61,15 @@ bindings = [
 #grow and shrink layout
     Key([mod], "i", lazy.layout.grow()),
     Key([mod], "m", lazy.layout.shrink()),
-    Key([mod], "n", lazy.layout.normalize()), 
+
     # Take screenshot
     # Take a whole-screen screenshot with Win + PrtSc
     Key([mod], "Print",
         lazy.function(lambda qtile: qtile.cmd_spawn(f"maim {screenshot_dir}/screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"))
     ),
 
-    # Take a screenshot of a selected area with Win + Shift + S
+     #Take a screenshot of a selected area with Win + Shift + S
     Key([mod, "shift"], "s",
-        lazy.function(lambda qtile: qtile.cmd_spawn(f"maim -s {screenshot_dir}/selected_screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"))
+       lazy.function(lambda qtile: qtile.cmd_spawn(f"maim -s {screenshot_dir}/selected_screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"))
     ),
 ]

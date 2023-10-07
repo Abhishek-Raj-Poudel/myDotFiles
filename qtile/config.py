@@ -7,9 +7,9 @@ from themes import Dracula, Midnight, Monokai, Tomorrow, One_dark, Nordic, Catpp
 
 from keyBinding import bindings, mod
 
-from qtile_extras import widget
-from qtile_extras.widget import WiFiIcon, UPowerWidget, ALSAWidget
-from qtile_extras.widget.decorations import PowerLineDecoration
+from qtile_extras.widget import WiFiIcon
+from widgets.battery_text import BatteryText
+
 
 import os
 from datetime import datetime
@@ -22,7 +22,7 @@ theme =Custom
 keys = bindings
 
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "1234567"]
 
 for i in groups:
     keys.extend(
@@ -42,9 +42,10 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(
-        border_focus=theme["BG1"],
-        border_width=1,
-        marign=8
+        #border_focus=theme["BG1"],
+        border_focus="00000033",
+        border_width=0,
+        margin=6,
         ),
 
     layout.Max(),
@@ -62,7 +63,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
+        bottom=bar.Bar(
             [
                 widget.TextBox("•", foreground=theme["BG1"]),
                 widget.TextBox("",foreground=theme["magenta"],padding=7),
@@ -88,29 +89,27 @@ screens = [
                     ),
 
                 widget.Spacer(),
-
-
- #: Wifi
+               # widget.Memory(),
+                 #: Wifi
                 WiFiIcon(interface='wlp4s0',padding_x=8,padding_y=8,
                 active_colour=theme["magenta"],inactive_colour=theme['BG1']),
                 widget.TextBox("|", foreground=theme["BG1"]),
 
 #: for audio
                 widget.TextBox("",foreground=theme["magenta"],padding=7),
-                # widget.ALSAWidget(),
                 widget.PulseVolume(foreground=theme["magenta"]),
                 widget.TextBox("|", foreground=theme["BG1"]),
+                #widget.Volume(channel='IEC958'),
 
 #: for brightness
                 widget.TextBox("󰃝", foreground=theme["magenta"],padding=7),
                 widget.Backlight(
                     brightness_file="/sys/class/backlight/amdgpu_bl1/brightness",
                     max_brightness_file="/sys/class/backlight/amdgpu_bl1/max_brightness",
-                    scroll=True,
                     ),
                 widget.TextBox("|", foreground=theme["BG1"]),
 # cpu 
-                widget.TextBox("",foreground=theme["magenta"],padding=7 ),
+                widget.TextBox("",padding=7 ),
                 widget.CPU(format='{load_percent}%'),
                 widget.TextBox("•", foreground=theme["BG1"]),
 
@@ -118,19 +117,18 @@ screens = [
                 widget.ThermalSensor(),
                 widget.TextBox("|", foreground=theme["BG1"]),
 
-# battery
-                widget.TextBox("",padding=9),
-                widget.Battery(discharge_char='',format='{percent:1.0%}'),
-                widget.TextBox("|", foreground=theme["BG1"]),
-
-#: Check Updates               
+BatteryText(
+                    10,
+                    foreground=theme["foreground"],
+                    fontsize=14,
+                ),
+#: Check Updates
                 # widget.TextBox("",foreground=theme["blue"],padding=7),
                 widget.CheckUpdates(display_format='  {updates}',distro='Arch_yay',foreground=theme["yellow"]),
                 widget.TextBox("•", foreground=theme["BG1"]),
             ],
             30,
-        #background=theme['background'],
-        background='191724e6',
+            background="1f1d2ecc",
         ),
     ),
 ]
