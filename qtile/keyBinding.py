@@ -43,8 +43,9 @@ bindings = [
     Key([mod,"shift"], "w", lazy.spawn('brave'), desc="Launch Browser"),
     Key([mod,"shift"], "f", lazy.spawn('thunar'), desc="Launch File Browser"),
     Key([mod,"shift"], "c", lazy.spawn('slack'), desc="Launch Chat app"),
-    Key([mod,"shift"], "n", lazy.spawn('obsidian'), desc="Launch Chat app"),
-    Key([mod,"shift"], "p", lazy.spawn('code'), desc="Launch Chat app"),
+    Key([mod,"shift"], "n", lazy.spawn('obsidian'), desc="Launch Note app"),
+    Key([mod,"shift"], "m", lazy.spawn('crx_pjibgclleladliembfgfagdaldikeohf'), desc="Launch Chat app"),
+    Key([mod,"shift"], "p", lazy.spawn('code'), desc="Launch Programming app"),
 
     # Lunch rofi for different things
     Key([mod], "Tab", lazy.spawn('rofi -show window -show-icons'), desc="Launch Rofi to toggle between windows"),

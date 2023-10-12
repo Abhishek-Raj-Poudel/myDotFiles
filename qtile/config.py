@@ -22,23 +22,37 @@ theme =Custom
 keys = bindings
 
 
-groups = [Group(i) for i in "1234567"]
+# groups = [Group(i) for i in "1234567"]
 
-for i in groups:
+# for i in groups:
+#     keys.extend(
+#         [
+#             Key(
+#                 [mod],
+#                 i.name,
+#                 lazy.group[i.name].toscreen(),
+#                 desc="Switch to group {}".format(i.name),
+#             ),
+#             Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
+#                 desc="move focused window to group {}".format(i.name)),
+#         ]
+#     )
+
+groups = [
+    Group("", matches=[Match(wm_class=['kitty'])]),
+    Group("", matches=[Match(wm_class=['brave-browser'])]),
+    Group("󰵅", matches=[Match(wm_class=['slack'])]),
+    Group("󰅨", matches=[Match(wm_class=["code-oss"])]),
+    Group("󱞁", matches=[Match(wm_class=["obsidian"])]),
+    Group("󰎄", matches=[Match(wm_class=["crx_pjibgclleladliembfgfagdaldikeohf"])]),
+]
+for i, group in enumerate(groups):
     keys.extend(
         [
-            Key(
-                [mod],
-                i.name,
-                lazy.group[i.name].toscreen(),
-                desc="Switch to group {}".format(i.name),
-            ),
-            Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-                desc="move focused window to group {}".format(i.name)),
+            Key([mod], str(i + 1), lazy.group[group.name].toscreen(), desc=f"Switch to group {group.name}"),
+            Key([mod, "shift"], str(i + 1), lazy.window.togroup(group.name), desc=f"Move focused window to group {group.name}"),
         ]
     )
-
-
 
 layouts = [
     layout.MonadTall(
@@ -85,7 +99,8 @@ screens = [
                     this_current_screen_border= theme["yellow"],
                     urgent_border = theme["red"],
                     urgent_text = theme["red"],
-                    padding_x = 14
+                    padding_x = 14,
+                    fontsize = 18
                 ),
 
                 widget.Spacer(),
