@@ -3,7 +3,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-from themes import Dracula, Midnight, Monokai, Tomorrow, One_dark, Nordic, Catppuccin, Custom
+from themes import Dracula, Midnight, Monokai, Tomorrow, One_dark, Nordic, Catppuccin, Custom, Monocrome, Gruvbox
 
 from keyBinding import bindings, mod
 
@@ -16,35 +16,19 @@ from datetime import datetime
 
 # theme to choose
 # theme = Custom
-theme =Custom
+theme = Gruvbox
 
 # Keybindings
 keys = bindings
 
-
-# groups = [Group(i) for i in "1234567"]
-
-# for i in groups:
-#     keys.extend(
-#         [
-#             Key(
-#                 [mod],
-#                 i.name,
-#                 lazy.group[i.name].toscreen(),
-#                 desc="Switch to group {}".format(i.name),
-#             ),
-#             Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-#                 desc="move focused window to group {}".format(i.name)),
-#         ]
-#     )
-
 groups = [
     Group("", matches=[Match(wm_class=['kitty'])]),
-    Group("", matches=[Match(wm_class=['brave-browser'])]),
     Group("󰵅", matches=[Match(wm_class=['slack'])]),
+    Group("󰾔", matches=[Match(wm_class=['brave-browser'])]),
     Group("󰅨", matches=[Match(wm_class=["code-oss"])]),
     Group("󱞁", matches=[Match(wm_class=["obsidian"])]),
     Group("󰎄", matches=[Match(wm_class=["crx_pjibgclleladliembfgfagdaldikeohf"])]),
+    Group(""),
 ]
 for i, group in enumerate(groups):
     keys.extend(
@@ -81,25 +65,23 @@ screens = [
             [
                 widget.TextBox("•", foreground=theme["BG1"]),
                 #Date
-                widget.TextBox("",padding=7),
-                widget.Clock(format="%Y-%m-%d %a"),
+                widget.TextBox("",padding=7,foreground=theme["foreground"] ),
+                widget.Clock(format="%Y-%m-%d %a",foreground=theme["foreground"]),
                 widget.TextBox("|", foreground=theme["BG1"]),
-
                 # Time
-                widget.TextBox("",padding=7),
-                widget.Clock(format="%I:%M %p"),
+                widget.Clock(format="%I:%M %p",foreground=theme["foreground"]),
 
                 widget.Spacer(),
 
                 widget.GroupBox(
                     highlight_method='text',
-                    foreground=theme["foreground"],
+                    foreground=theme["yellow"],
                     active = theme["white"],
-                    inactive = theme["BG6"],
-                    this_current_screen_border= theme["yellow"],
+                    inactive = theme["BG3"],
+                    this_current_screen_border= theme["green"],
                     urgent_border = theme["red"],
                     urgent_text = theme["red"],
-                    padding_x = 14,
+                    padding_x = 12,
                     fontsize = 18
                 ),
 
@@ -107,18 +89,19 @@ screens = [
 
                  #: Wifi
                 WiFiIcon(interface='wlp4s0',padding_x=8,padding_y=8,
-                active_colour=theme["magenta"],inactive_colour=theme['BG1']),
+                inactive_colour=theme['BG1'], active_colour=theme["foreground"]),
 
                 #: for audio
-                widget.TextBox("",foreground=theme["magenta"],padding=7),
-                widget.PulseVolume(foreground=theme["magenta"]),
-                widget.TextBox("|", foreground=theme["BG1"]),
+                widget.TextBox("",padding=7,foreground=theme["foreground"]),
+                widget.PulseVolume(foreground=theme["foreground"]),
+                widget.TextBox("|", foreground=theme["foreground"]),
 
                 #: for brightness
-                widget.TextBox("󰃝",padding=7),
+                widget.TextBox("󰃝",padding=7, foreground=theme["foreground"]),
                 widget.Backlight(
                     brightness_file="/sys/class/backlight/amdgpu_bl1/brightness",
                     max_brightness_file="/sys/class/backlight/amdgpu_bl1/max_brightness",
+foreground=theme["foreground"]
                     ),
                 widget.TextBox("|", foreground=theme["BG1"]),
 
@@ -132,23 +115,24 @@ screens = [
                 widget.WidgetBox(widgets=[ 
                 widget.TextBox("|", foreground=theme["BG1"]),
                 # cpu 
-                widget.CPU(format='   {load_percent}%'),
+                widget.CPU(format='   {load_percent}%',foreground=theme['foreground']),
                 # Cpu Temp 
-                widget.ThermalSensor(),
+                widget.ThermalSensor(foreground=theme['foreground']),
                 widget.TextBox("|", foreground=theme["BG1"]),
-                widget.NvidiaSensors(fmt='󰘚   {}'),
+                widget.NvidiaSensors(fmt='󰘚   {}' ,foreground=theme['foreground']),
                 widget.TextBox("|", foreground=theme["BG1"]),
                 #: Check Updates
                 widget.CheckUpdates(display_format='   {updates}',distro='Arch_yay',foreground=theme["yellow"]),
                 ],
                 text_open='󰅖',
                 text_closed='󰍜',
-                close_button_location='right'
+                close_button_location='right',
+                foreground=theme['foreground']
                 ),
                 widget.TextBox("•", foreground=theme["BG1"]),
             ],
             30,
-            background="1f1d2ecc",
+            background='282828'
         ),
     ),
 ]
