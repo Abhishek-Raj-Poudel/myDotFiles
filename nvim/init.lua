@@ -201,21 +201,6 @@ require('lazy').setup({
     },
   },
 
--- {
---   -- Theme inspired by Atom
---   'navarasu/onedark.nvim',
---   priority = 1000,
---   lazy = false,
---   config = function()
---     require('onedark').setup {
---       -- Set a style preset. 'dark' is default.
---       style = 'dark', -- dark, darker, cool, deep, warm, warmer, light
---     }
---     require('onedark').load()
---   end,
--- },
-
-
  {
    -- Theme inspired by gruvbox
    'ellisonleao/gruvbox.nvim',
@@ -223,7 +208,7 @@ require('lazy').setup({
    lazy = false,
    config = function()
      require('gruvbox').setup {
-terminal_colors = true, -- add neovim terminal colors
+--terminal_colors = true, -- add neovim terminal colors
   undercurl = true,
   underline = true,
   bold = true,
@@ -249,6 +234,13 @@ terminal_colors = true, -- add neovim terminal colors
      require('gruvbox').load()
    end,
  },
+
+
+
+{ 'mhartington/formatter.nvim',
+
+  },
+
 
 
   {
@@ -310,7 +302,7 @@ terminal_colors = true, -- add neovim terminal colors
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
+--require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -321,6 +313,25 @@ terminal_colors = true, -- add neovim terminal colors
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
 }, {})
+
+-- setting up formatter
+--local util = require "formatter.util"
+
+require('formatter').setup{
+
+  logging = true,
+
+  log_level = vim .log.levels.WARN,
+  -- All formatter configuration a4re opt-in
+  filetypes = {
+["*"] = {
+    require("formatter.filetypes.any").remove_trailing_whitespace
+  }
+
+}
+}
+
+
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -367,6 +378,10 @@ vim.o.termguicolors = true
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
+
+-- keymap for formatting
+vim.keymap.set('n','<Space>f', ':Format<CR>',{noremap = true, silent = true})
+
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
