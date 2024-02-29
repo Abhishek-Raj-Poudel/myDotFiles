@@ -201,6 +201,8 @@ require('lazy').setup({
     },
   },
 
+  {'Shatur/neovim-ayu'},
+
  {
    -- Theme inspired by gruvbox
    'ellisonleao/gruvbox.nvim',
@@ -237,9 +239,7 @@ require('lazy').setup({
 
 
 
-{ 'mhartington/formatter.nvim',
-
-  },
+{ 'mhartington/formatter.nvim',},
 
 
 
@@ -379,8 +379,10 @@ vim.o.termguicolors = true
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 
--- keymap for formatting
-vim.keymap.set('n','<Space>f', ':Format<CR>',{noremap = true, silent = true})
+
+
+
+
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -474,6 +476,19 @@ local function telescope_live_grep_open_files()
     prompt_title = 'Live Grep in Open Files',
   }
 end
+
+-- Map space + f to format your code 
+vim.keymap.set('n', '<leader>f', '<Cmd>Format<CR>', { noremap = true, silent = true })
+
+-- Map space + w and then v to create a vertical split
+vim.keymap.set('n', '<leader>wv', '<Cmd>vsplit<CR>', { noremap = true, silent = true })
+
+-- Map space + w and then v to create a vertical split
+vim.keymap.set('n', '<leader>wh', '<Cmd>split<CR>', { noremap = true, silent = true })
+
+-- Map space + w + w to switch between splits like Ctrl + w + w
+vim.keymap.set('n', '<leader>ww', '<C-w>w', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
 vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
 vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
