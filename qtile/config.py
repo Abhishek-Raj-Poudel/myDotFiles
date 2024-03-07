@@ -27,7 +27,7 @@ groups = [
     Group("󰾔", matches=[Match(wm_class=['brave-browser'])]),
     Group("󰅨", matches=[Match(wm_class=["code-oss"])]),
     Group("󱞁", matches=[Match(wm_class=["obsidian"])]),
-    Group("󰎄", matches=[Match(wm_class=["crx_pjibgclleladliembfgfagdaldikeohf"])]),
+    Group("󰎄", matches=[Match(wm_class=["spotify"])]),
     Group(""),
 ]
 for i, group in enumerate(groups):

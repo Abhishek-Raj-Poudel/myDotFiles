@@ -477,6 +477,13 @@ local function telescope_live_grep_open_files()
   }
 end
 
+-- personal Keybindings
+
+-- Map Ctrl+S to save (:w)
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
+
+
 -- Map space + f to format your code 
 vim.keymap.set('n', '<leader>f', '<Cmd>Format<CR>', { noremap = true, silent = true })
 

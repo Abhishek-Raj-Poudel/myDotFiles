@@ -39,12 +39,12 @@ bindings = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     
     # Lunch software and codes
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "Return", lazy.spawn('kitty'), desc="Launch terminal"),
     Key([mod,"shift"], "w", lazy.spawn('brave'), desc="Launch Browser"),
     Key([mod,"shift"], "f", lazy.spawn('thunar'), desc="Launch File Browser"),
     Key([mod,"shift"], "c", lazy.spawn('slack'), desc="Launch Chat app"),
     Key([mod,"shift"], "n", lazy.spawn('obsidian'), desc="Launch Note app"),
-    Key([mod,"shift"], "m", lazy.spawn('crx_pjibgclleladliembfgfagdaldikeohf'), desc="Launch Chat app"),
+    Key([mod,"shift"], "m", lazy.spawn('spotify'), desc="Launch Chat app"),
     Key([mod,"shift"], "p", lazy.spawn('code'), desc="Launch Programming app"),
 
     # Lunch rofi for different things
