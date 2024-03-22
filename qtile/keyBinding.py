@@ -45,7 +45,7 @@ bindings = [
     Key([mod,"shift"], "c", lazy.spawn('slack'), desc="Launch Chat app"),
     Key([mod,"shift"], "n", lazy.spawn('obsidian'), desc="Launch Note app"),
     Key([mod,"shift"], "m", lazy.spawn('spotify'), desc="Launch Chat app"),
-    Key([mod,"shift"], "p", lazy.spawn('code'), desc="Launch Programming app"),
+    Key([mod,"shift"], "p", lazy.spawn('cursor.AppImage'), desc="Launch Programming app"),
 
     # Lunch rofi for different things
     Key([mod], "Tab", lazy.spawn('rofi -show window -show-icons'), desc="Launch Rofi to toggle between windows"),

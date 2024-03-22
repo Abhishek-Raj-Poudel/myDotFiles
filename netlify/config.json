@@ -1,0 +1,16 @@
+{
+	"telemetryDisabled": false,
+	"cliId": "8d824249-5932-43a3-9542-55a27707a835",
+	"userId": "63234c9b8900896fe4a8d57e",
+	"users": {
+		"63234c9b8900896fe4a8d57e": {
+			"id": "63234c9b8900896fe4a8d57e",
+			"name": null,
+			"email": "abhishekrajpoudel@gmail.com",
+			"auth": {
+				"token": "nfc_9pof5Eu3jWSPYUzPCC9ddw3pJimQCory259c",
+				"github": {}
+			}
+		}
+	}
+}

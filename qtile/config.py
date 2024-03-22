@@ -25,7 +25,7 @@ groups = [
     Group("", matches=[Match(wm_class=['kitty'])]),
     Group("󰵅", matches=[Match(wm_class=['slack'])]),
     Group("󰾔", matches=[Match(wm_class=['brave-browser'])]),
-    Group("󰅨", matches=[Match(wm_class=["code-oss"])]),
+    Group("󰅨", matches=[Match(wm_class=["cursor.AppImage"])]),
     Group("󱞁", matches=[Match(wm_class=["obsidian"])]),
     Group("󰎄", matches=[Match(wm_class=["spotify"])]),
     Group(""),
